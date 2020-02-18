@@ -1,0 +1,21 @@
+sudo: required
+dist: xenial
+
+language: python
+
+python:
+  - "3.5"
+  - "3.6"
+  - "3.7"
+  - "3.8-dev"
+
+install:
+  - travis_retry pip install -U tox-travis
+
+script:
+  - tox
+
+after_success:
+  - travis_retry pip install -U codecov
+  - codecov
+  - test $TRAVIS_EVENT_TYPE = "push" && tox -e upload_coverage
