@@ -18,12 +18,12 @@ def get_packages(package):
 
 setup(
     name="djedefre",
-    version="2.0.3",
+    version="1.0.0",
     packages=get_packages("djoser"),
     license="MIT",
     author="iQueensu",
-    description="REST version of Django authentication system. This is a fork of djoser",
-    author_email="fake@fake.email",
+    description="REST version of Django authentication system. This is a fork of djoser.",
+    # author_email="fake@fake.email",
     long_description=readme,
     install_requires=["django-templated-mail"],
     setup_requires=["Babel>=2.6.0"],
@@ -32,8 +32,8 @@ setup(
     classifiers=[
         "Development Status :: 5 - Production/Stable",
         "Framework :: Django",
-        "Framework :: Django :: 1.11",
         "Framework :: Django :: 2.2",
+        "Framework :: Django :: 3.0",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
